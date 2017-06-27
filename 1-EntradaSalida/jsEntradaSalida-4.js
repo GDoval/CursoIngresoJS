@@ -4,6 +4,10 @@
 */
 function Mostar()
 {
-	
+	var dato;
+	var dato2;
+	dato = prompt ("Ingresame un dato, porfi");
+	dato2 = document.getElementById(dato).value;
+	alert (dato2);
 }
 
