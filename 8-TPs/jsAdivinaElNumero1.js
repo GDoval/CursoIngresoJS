@@ -9,13 +9,32 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var contadorIntentos;
+contadorIntentos = 1;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
-	
+	var numero;
+	numeroSecreto = Math.floor((Math.random() * 100) + 1);
+	alert(numeroSecreto);
+	numero = document.getElementById('numero').value;
+	while (numeroSecreto != numero)
+	{
+		if (numeroSecreto < numero)
+		{
+			alert("Te falta para llegar!!!");
+			contadorIntentos += 1;
+			numero = prompt("Volve a ingresar un numero!!!");
+
+		}
+		else
+		{
+			alert("Te pasaste!!!!!!!");
+			contadorIntentos += 1;
+			numero = prompt("Volve a ingresar un numero!!!");
+
+		}
+
+	}
 
 }
 
