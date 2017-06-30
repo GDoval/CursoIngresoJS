@@ -10,16 +10,17 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 var numeroSecreto; 
 var contadorIntentos;
 contadorIntentos = 1;
+numeroSecreto = Math.floor((Math.random() * 100) + 1);
 
 function comenzar()
 {
 	var numero;
-	numeroSecreto = Math.floor((Math.random() * 100) + 1);
-	alert(numeroSecreto);
 	numero = document.getElementById('numero').value;
-	while (numeroSecreto != numero)
-	{
-		if (numeroSecreto < numero)
+	alert(numero);
+	alert(numeroSecreto);
+	while (numero != numeroSecreto)
+	{	
+		if (numero < numeroSecreto)
 		{
 			alert("Te falta para llegar!!!");
 			contadorIntentos += 1;
@@ -35,6 +36,9 @@ function comenzar()
 		}
 
 	}
+
+
+alert("Acertaste en " + contadorIntentos + " intentos!!!!");
 
 }
 
