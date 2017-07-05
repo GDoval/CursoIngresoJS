@@ -11,7 +11,6 @@ var numeroSecreto;
 var contadorIntentos;
 contadorIntentos = 1;
 
-
 function comenzar()
 {
 	numeroSecreto = Math.floor((Math.random() * 100) + 1);
@@ -45,6 +44,6 @@ function verificar()
 
 	alert("Acertaste en " + contadorIntentos + " intentos!!!!");
 	document.getElementById('intentos').value = contadorIntentos;
-
+	contadorIntentos = 1;
 	
 }
