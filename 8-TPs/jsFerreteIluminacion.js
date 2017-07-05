@@ -18,12 +18,19 @@ function CalcularPrecio ()
  	var proveedor;
  	var resultado;
  	var descuento;
+ 	var impuesto;
  	cantidad = document.getElementById('Cantidad').value;
  	proveedor = document.getElementById("Marca").value;
  	cantidad = parseInt(cantidad);
  	if (cantidad >= 6)
  	{
  		resultado = (cantidad * 35) * 0.50 ;
+ 		if (resultado > 120)
+ 		{
+ 			impuesto = resultado * 0.10;
+ 			resultado = resultado + impuesto;
+ 			alert ("Usted pagó $" + impuesto + " de impuestos");
+ 		}
  		document.getElementById("precioDescuento").value =  resultado;
 
  	}
@@ -33,6 +40,12 @@ function CalcularPrecio ()
  		{
  			resultado = cantidad * 35;
  			descuento = resultado - (resultado * 0.4);
+ 			if (descuento > 120)
+ 			{
+ 				impuesto = descuento * 0.10;
+ 				descuento = descuento + impuesto;
+ 				alert ("Usted pagó $" + impuesto + " de impuestos");
+ 			}
  			document.getElementById ("precioDescuento").value = descuento;
  		}
  		else
@@ -41,6 +54,12 @@ function CalcularPrecio ()
  			{
  				resultado = cantidad * 35;
  				descuento = resultado - (resultado * 0.3);
+ 				if (descuento > 120)
+ 				{
+ 					impuesto = descuento * 0.10;
+ 					descuento = descuento + impuesto;
+ 					alert ("Usted pagó $" + impuesto + " de impuestos");
+ 				}
  				document.getElementById("precioDescuento").value = descuento;
  			}
  		
@@ -49,7 +68,13 @@ function CalcularPrecio ()
  				if ((cantidad == 4) && ((proveedor == "ArgentinaLuz") || (proveedor == "FelipeLamparas")))
  				{
  					resultado = cantidad * 35;
- 					descuento = resultado - (resultado * 0.25); 
+ 					descuento = resultado - (resultado * 0.25);
+ 					if (descuento > 120)
+ 					{
+ 						impuesto = descuento * 0.10;
+ 						descuento = descuento + impuesto;
+ 						alert ("Usted pagó $" + impuesto + " de impuestos");
+ 					} 
  					document.getElementById("precioDescuento").value = descuento;
  				}
  				else
@@ -58,6 +83,12 @@ function CalcularPrecio ()
  					{
  						resultado = cantidad * 35;
  						descuento = resultado - (resultado * 0.20);
+ 						if (descuento > 120)
+ 						{
+ 							impuesto = descuento * 0.10;
+ 							descuento = descuento + impuesto;
+ 							alert ("Usted pagó $" + impuesto + " de impuestos");
+ 						}
  						document.getElementById("precioDescuento").value = descuento;
  					}
  					else
@@ -66,6 +97,12 @@ function CalcularPrecio ()
  						{
  							resultado = cantidad * 35;
  							descuento = resultado - (resultado * 0.15);
+ 							if (descuento > 120)
+ 							{
+ 								impuesto = descuento * 0.10;
+ 								descuento = descuento + impuesto;
+ 								alert ("Usted pagó $" + impuesto + " de impuestos");
+ 							}
  							document.getElementById("precioDescuento").value = descuento;
  						}
  						else
@@ -74,6 +111,12 @@ function CalcularPrecio ()
  							{
  								resultado = cantidad * 35;
  								descuento = resultado - (resultado * 0.10);
+ 								if (descuento > 120)
+ 									{
+ 										impuesto = descuento * 0.10;
+ 										descuento = descuento + impuesto;
+ 										alert ("Usted pagó $" + impuesto + " de impuestos");
+ 									}
  								document.getElementById("precioDescuento").value = descuento;
  							}
  							else
@@ -82,6 +125,12 @@ function CalcularPrecio ()
  								{
  									resultado = cantidad * 35;
  									descuento = resultado - (resultado * 0.05);
+ 									if (descuento > 120)
+ 										{
+ 											impuesto = descuento * 0.10;
+ 											descuento = descuento + impuesto;
+ 											alert ("Usted pagó $" + impuesto + " de impuestos");
+ 										}
  									document.getElementById("precioDescuento").value = descuento;
  								}
  									
