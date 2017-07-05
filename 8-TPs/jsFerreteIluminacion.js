@@ -29,7 +29,7 @@ function CalcularPrecio ()
  		{
  			impuesto = resultado * 0.10;
  			resultado = resultado + impuesto;
- 			alert ("Usted pagó $" + impuesto + " de impuestos");
+ 			alert ("Usted pagó $" + impuesto + " de impuestoss");
  		}
  		document.getElementById("precioDescuento").value =  resultado;
 
