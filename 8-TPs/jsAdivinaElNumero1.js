@@ -10,14 +10,19 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 var numeroSecreto; 
 var contadorIntentos;
 contadorIntentos = 1;
-numeroSecreto = Math.floor((Math.random() * 100) + 1);
+
 
 function comenzar()
 {
+	numeroSecreto = Math.floor((Math.random() * 100) + 1);
+	console.log(numeroSecreto);
+}
+
+function verificar()
+{
 	var numero;
 	numero = document.getElementById('numero').value;
-	alert(numero);
-	alert(numeroSecreto);
+
 	while (numero != numeroSecreto)
 	{	
 		if (numero < numeroSecreto)
@@ -38,12 +43,8 @@ function comenzar()
 	}
 
 
-alert("Acertaste en " + contadorIntentos + " intentos!!!!");
+	alert("Acertaste en " + contadorIntentos + " intentos!!!!");
+	document.getElementById('intentos').value = contadorIntentos;
 
-}
-
-function verificar()
-{
-	
 	
 }

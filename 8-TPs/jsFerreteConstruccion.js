@@ -18,7 +18,12 @@ function Rectangulo ()
 }
 function Circulo () 
 {
-	
+	var radio;
+	var resul;
+	radio = document.getElementById('Radio').value;
+	radio = parseInt(radio);
+	resul = (Math.PI * radio * radio) * 3 ;
+	alert(resul); 
 }
 function Materiales () 
 {
