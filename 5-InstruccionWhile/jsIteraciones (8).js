@@ -9,7 +9,7 @@ function Mostrar()
 	resultado = 0;
 	respuesta = "si";
 	negativo = 1;
-	while (respuesta == "si")
+	while (respuesta.toLowerCase() == "si")// toLowerCase() sirve para validar tanto la opcion en minuscula como en mayuscula
 		{
 			cont++;
 			num = prompt("Ingrese un numero:");
