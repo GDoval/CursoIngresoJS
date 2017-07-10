@@ -19,7 +19,8 @@ function Mostrar()
 			}
 			resultado = resultado + numero;
 		}
-
+		document.getElementById('suma').value = resultado;
+		resultado = resultado / cont; 
 		document.getElementById('promedio').value = resultado;
 
 
