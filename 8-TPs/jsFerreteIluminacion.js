@@ -138,12 +138,12 @@ function CalcularPrecio ()
  								}
  							}
  									
- 							}
  						}
  					}
  				}
- 		
  			}
+ 		
  		}
  	}
+}
 
