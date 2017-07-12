@@ -32,7 +32,7 @@ function Mostrar()
 				cantcero++;
 			}
 		}
-		if (num % 2 == 0 && num != 0)
+		if (num % 2 == 0)
 		{
 			cantpar++;
 		}
