@@ -50,7 +50,7 @@ function CalcularPrecio ()
  		}
  		else
  		{
- 			if (cantidad == 5 && proveedor != "ArgentinaLuz")
+ 			if (cantidad == 5 && proveedor != "ArgentinaLuz") //redundante poner si no es ArgLuz, ya que entró en el else de la primer condición
  			{
  				resultado = cantidad * 35;
  				descuento = resultado - (resultado * 0.3);
@@ -79,7 +79,7 @@ function CalcularPrecio ()
  				}
  				else
  				{
- 					if ((cantidad == 4) && ((proveedor != "ArgentinaLuz") && (proveedor != "FelipeLamparas")))
+ 					if ((cantidad == 4) && ((proveedor != "ArgentinaLuz") && (proveedor != "FelipeLamparas"))) //redundante aca tmb, ya se pregunto en el if anterior
  					{
  						resultado = cantidad * 35;
  						descuento = resultado - (resultado * 0.20);
@@ -121,17 +121,10 @@ function CalcularPrecio ()
  							}
  							else
  							{
- 								if((cantidad > 0) && (cantidad <= 3) && ((proveedor != "ArgentinaLuz") && (proveedor != "FelipeLamparas")))
+ 								if( (cantidad > 0) && (cantidad < 3) )
  								{
  									resultado = cantidad * 35;
- 									descuento = resultado - (resultado * 0.05);
- 									if (descuento > 120)
- 										{
- 											impuesto = descuento * 0.10;
- 											descuento = descuento + impuesto;
- 											alert ("Usted pagó $" + impuesto + " de impuestos");
- 										}
- 									document.getElementById("precioDescuento").value = descuento;
+ 									document.getElementById("precioDescuento").value = resultado;
  								}
  									
  							}
