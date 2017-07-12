@@ -42,7 +42,11 @@ function Mostrar()
 
 	promediomax = sumamax / cantmax;
 	promediomin = sumamin / cantmin;
-	diferencia = sumamin - sumamax;
+	diferencia = cantmin - cantmax; // siempre tiene que dar positivo (diferencia entre cantidad numeros positivos y negativos ingresados)
+	if (diferencia < 0) 
+		{
+			diferencia = diferencia * -1; //si es negativo lo pasa a positivo.
+		}
 	document.write("La suma de los positivos es " + sumamax + ", la suma de los negativos es " + sumamin + ", la cantidad de ceros es " + cantcero + ", la cantidad de numeros pares es " + cantpar + ", el promedio de los positivos es " + promediomax + ", el promedio de los negativos es " + promediomin + ", la diferencia entre positivos y negativos es " + diferencia);
 
 		
