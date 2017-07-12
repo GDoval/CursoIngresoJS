@@ -24,7 +24,7 @@ function CalcularPrecio ()
  	cantidad = parseInt(cantidad);
  	if (cantidad >= 6)
  	{
- 		resultado = (cantidad * 35) * 0.50 ;
+ 		resultado = (cantidad * 35) * 0.50 ; // crear una variable con precio para que sea más facil de actualizar!
  		if (resultado > 120)
  		{
  			impuesto = resultado * 0.10;
