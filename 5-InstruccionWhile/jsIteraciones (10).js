@@ -39,9 +39,22 @@ function Mostrar()
 		respuesta = prompt("Quiere seguir ingresando numeros?");
 
 	}
-
-	promediomax = sumamax / cantmax;
-	promediomin = sumamin / cantmin;
+	if (cantmax > 0 )
+		{
+			promediomax = sumamax / cantmax;
+		}
+		else
+		{
+			promediomax = "No se ingresaron numeros positivos";
+		}
+	if (cantmin > 0)
+		{
+			promediomin = sumamin / cantmin;
+		}
+		else
+		{
+			promediomin = "No se ingresaron numeros negativos";
+		}	
 	diferencia = cantmin - cantmax; // siempre tiene que dar positivo (diferencia entre cantidad numeros positivos y negativos ingresados)
 	if (diferencia < 0) 
 		{
