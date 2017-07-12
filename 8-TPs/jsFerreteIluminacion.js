@@ -121,11 +121,22 @@ function CalcularPrecio ()
  							}
  							else
  							{
- 								if( (cantidad > 0) && (cantidad < 3) )
+ 								if ((cantidad == 3))
  								{
  									resultado = cantidad * 35;
- 									document.getElementById("precioDescuento").value = resultado;
+ 									descuento = resultado - (resultado * 0.05);
+ 									document.getElementById('precioDescuento').value = descuento;
  								}
+ 								else
+ 								{
+ 									if (cantidad < 3 && cantidad > 0)
+ 									{
+ 									resultado = cantidad * 35;
+ 									document.getElementById("precioDescuento").value = resultado;	
+ 									}
+ 									
+ 								}
+ 							}
  									
  							}
  						}
@@ -136,5 +147,3 @@ function CalcularPrecio ()
  		}
  	}
 
-
-}
