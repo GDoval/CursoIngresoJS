@@ -9,6 +9,7 @@ function Mostrar()
 		if ( num % i == 0 )
 		{
 			resp ="El numero " + num + " no es primo";
+			break;
 		}
 	
 	}
